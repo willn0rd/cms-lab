@@ -1,0 +1,61 @@
+services:
+
+ db:
+
+  image: mariadb:11
+
+  environment:
+
+   MARIADB_DATABASE: wordpress
+
+   MARIADB_USER: wp
+
+   MARIADB_PASSWORD: wp_haslo_lab
+
+   MARIADB_ROOT_PASSWORD: root_haslo_lab
+
+  volumes: 
+
+   - db:/var/lib/mysql
+
+
+
+ wordpress:
+
+  image: wordpress:latest
+
+  ports: 
+
+   - "8080:80"
+
+  environment:
+
+   WORDPRESS_DB_HOST: db
+
+   WORDPRESS_DB_USER: wp
+
+   WORDPRESS_DB_PASSWORD: wp_haslo_lab
+
+   WORDPRESS_DB_NAME: wordpress
+
+   CODESPACE_NAME: ${CODESPACE_NAME}
+
+   PF_DOMAIN: ${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}
+
+   WORDPRESS_CONFIG_EXTRA: |
+
+    $$u= 'https://' . getenv('CODESPACE_NAME') . '-8080.' . getenv('PF_DOMAIN');
+
+    define('WP_HOME', $$u); define('WP_SITEURL', $$u);
+
+    $$_SERVER['HTTPS'] = 'on';
+
+  depends_on: 
+
+   - db
+
+
+
+volumes:
+
+ db: {}
