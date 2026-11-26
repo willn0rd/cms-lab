@@ -1,0 +1,26 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/wp-admin/",
+  "preferredVersions": { "php": "8.3", "wp": "latest" },
+  "login": true,
+  "steps": [
+    { "step": "setSiteLanguage", "language": "pl_PL" },
+    {
+      "step": "installTheme",
+      "themeData": { "resource": "wordpress.org/themes", "slug": "twentytwentyfive" },
+      "options": { "activate": true }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": { "resource": "wordpress.org/plugins", "slug": "contact-form-7" }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "FastBike",
+        "blogdescription": "Szybki serwis i części rowerowe",
+        "permalink_structure": "/%postname%/"
+      }
+    }
+  ]
+}
