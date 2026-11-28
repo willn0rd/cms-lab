@@ -6,8 +6,8 @@
 |---|---|
 | **Nazwa** | FastBike |
 | **Branża** | Serwis i sprzedaż rowerów |
-| **Grupa docelowa** | Osoby jeżdżące rekreacyjnie oraz dojeżdżające rowerem do pracy |
-| **Propozycja wartości** | Szybka, przejrzysta i przewidywalna cenowo opieka nad rowerem – od naprawy po zakup akcesoriów |
+| **Grupa docelowa** | Osoby jeżdżące rekreacyjnie |
+| **Propozycja wartości** | Szybka, przejrzysta i przewidywalna cenowo opieka nad rowerem |
 
 ### Oferta
 
@@ -112,3 +112,8 @@ Strona główna → „Zobacz ofertę” → Sklep / Akcesoria → filtr „ośw
 | Łatwość obsługi | Wysoka | Wysoka | Niska |
 | Sklep i rezerwacje | WooCommerce + wtyczki | Wbudowany sklep, rezerwacje przez aplikacje | Wymaga konfiguracji |
 | Dobór do FastBike | **Najlepszy** | Dobry dla samego sklepu | Zbyt rozbudowany |
+
+## 6. Użycie AI
+- **Tekst** - Persony, Mapa strony, część tekstu wstawionego w stronach, generalne redagowanie tekstu
+- **Technologiczne** - Poprawa pliku .yml, rozwiązanie problemu z bazą danych - każda strona oprócz głównej była przekierowana na localhost (zakładanie nowego codespace nie pomagało) 
+- **Planowanie** - Używane do odbijania pomysłów
